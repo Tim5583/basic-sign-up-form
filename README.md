@@ -14,6 +14,7 @@
 ### Screenshot
 
 ![the screenshot](./Screenshot.png)
+- [live-URL](https://signup-form-component-master.netlify.app/)
 
 ## My process
 
