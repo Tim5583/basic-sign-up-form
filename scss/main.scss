@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;0,700;1,500&display=swap');
+
+
+$Red: hsl(0, 100%, 74%);
+$Green: hsl(154, 59%, 51%);
+// ### Accent
+$Blue: hsl(248, 32%, 49%);
+// ### Neutral
+$Dark-Blue: hsl(249, 10%, 26%);
+$Grayish-Blue: hsl(246, 25%, 77%);
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  background-color: $Red;
+  background-image: url(../images/bg-intro-desktop.png);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1280px;
+  text-align: center;
+  width: 90%;
+  margin: auto;
+  &-description {
+    padding: 1rem 0rem 3rem;
+    color: #fff;
+
+    h1 {
+      width: 60%;
+      margin: auto;
+      font-size: 1.5rem;
+    }
+
+    p {
+      padding: 1rem 0;
+      font-size: .9rem;
+    }
+  }
+}
+
+.form {
+  max-width: 500px;
+  margin: auto;
+  .card {
+    background-color: $Blue;
+    border-radius: 5px;
+    padding: 1rem 5rem;
+    font-size: .9rem;
+    color: $Grayish-Blue;
+    margin-bottom: 1rem;
+    
+    span {
+      font-weight: 600;
+      color: #fff;
+    }
+  }
+
+  form {
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 1rem;
+    .form-group {
+      display: flex;
+      margin: .5rem 0 1.5rem;
+      position: relative;
+      input {
+        width: 100%;
+        padding: .9rem 2rem .9rem .9rem;
+        border-radius: 5px;
+        border: 1px solid rgb(163, 163, 163);
+
+        &:focus {
+          outline: none;
+        }
+      }
+
+      .error-ms {
+        position: absolute;
+        color: red;
+        font-size: .6rem;
+        bottom:-13px;
+        right: 5px;
+        display: none;
+      }
+
+      .error-icon {
+        position: absolute;
+        right: 5px;
+        top: 50%;
+        transform: translateY(-50%) scale(.8);
+        display: none;
+      }
+    }
+    .submit-btn {
+      padding: .9rem;
+      margin-top: .5rem;
+      border: none;
+      border-radius: 5px;
+      background-color: $Green;
+      color: #fff;
+      font-weight: 600;
+      width: 100%;
+      cursor: pointer;
+    }
+
+    .terms {
+      display: block;
+      font-size: .7rem;
+      padding: .5rem 2rem;
+      color: $Grayish-Blue;
+
+      a {
+        color: $Red;
+        font-weight: 600;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+@media (min-width: 800px) {
+  .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: .5rem;
+
+    &-description {
+      text-align: left;
+      h1 {
+        width: 80%;
+        margin: 0;
+        font-size: 2.5rem;
+      }
+      p {
+        width: 80%;
+      }
+    }
+  }
+}
+
+.form-group.show .error-ms, .form-group.show .error-icon {
+  display: block !important;
+}

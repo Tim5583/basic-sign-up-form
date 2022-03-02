@@ -1,0 +1,163 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;0,700;1,500&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  background-color: #ff7a7a;
+  background-image: url(../images/bg-intro-desktop.png);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1280px;
+  text-align: center;
+  width: 90%;
+  margin: auto;
+}
+
+.container-description {
+  padding: 1rem 0rem 3rem;
+  color: #fff;
+}
+
+.container-description h1 {
+  width: 60%;
+  margin: auto;
+  font-size: 1.5rem;
+}
+
+.container-description p {
+  padding: 1rem 0;
+  font-size: .9rem;
+}
+
+.form {
+  max-width: 500px;
+  margin: auto;
+}
+
+.form .card {
+  background-color: #6055a5;
+  border-radius: 5px;
+  padding: 1rem 5rem;
+  font-size: .9rem;
+  color: #b9b6d3;
+  margin-bottom: 1rem;
+}
+
+.form .card span {
+  font-weight: 600;
+  color: #fff;
+}
+
+.form form {
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 1rem;
+}
+
+.form form .form-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: .5rem 0 1.5rem;
+  position: relative;
+}
+
+.form form .form-group input {
+  width: 100%;
+  padding: .9rem 2rem .9rem .9rem;
+  border-radius: 5px;
+  border: 1px solid #a3a3a3;
+}
+
+.form form .form-group input:focus {
+  outline: none;
+}
+
+.form form .form-group .error-ms {
+  position: absolute;
+  color: red;
+  font-size: .6rem;
+  bottom: -13px;
+  right: 5px;
+  display: none;
+}
+
+.form form .form-group .error-icon {
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  -webkit-transform: translateY(-50%) scale(0.8);
+          transform: translateY(-50%) scale(0.8);
+  display: none;
+}
+
+.form form .submit-btn {
+  padding: .9rem;
+  margin-top: .5rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #38cc8c;
+  color: #fff;
+  font-weight: 600;
+  width: 100%;
+  cursor: pointer;
+}
+
+.form form .terms {
+  display: block;
+  font-size: .7rem;
+  padding: .5rem 2rem;
+  color: #b9b6d3;
+}
+
+.form form .terms a {
+  color: #ff7a7a;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+@media (min-width: 800px) {
+  .container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: .5rem;
+  }
+  .container-description {
+    text-align: left;
+  }
+  .container-description h1 {
+    width: 80%;
+    margin: 0;
+    font-size: 2.5rem;
+  }
+  .container-description p {
+    width: 80%;
+  }
+}
+
+.form-group.show .error-ms, .form-group.show .error-icon {
+  display: block !important;
+}
+/*# sourceMappingURL=main.css.map */
